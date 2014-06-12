@@ -32,6 +32,9 @@ Or, alternatively, set ENV variables with the same names as above.
 Please send feedback about this example to mingle.feedback@thoughtworks.com
 
 Thanks!
+
 The Mingle Team
-(getmingle.io)[http://getmingle.io]
-(@thatsmingle)[https://twitter.com/thatsmingle]
+
+[getmingle.io](http://getmingle.io)
+
+[@thatsmingle](https://twitter.com/thatsmingle)
