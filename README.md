@@ -23,6 +23,8 @@ Replace `API_ENDPOINT` with the value from
 
 Replace `PROJECT_IDENTIFIER` with the project identifier from the URL.
 
+Or, alternatively, set ENV variables with the same names as above.
+
 `> ruby client.rb get` will request murmurs and print out their authors and content
 
 `> ruby client.rb post hello` will post a new murmur 'hello'
