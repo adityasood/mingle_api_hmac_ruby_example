@@ -21,11 +21,14 @@ SECRET_ACCESS_KEY=ENV['SECRET_ACCESS_KEY'] || 'xyz123'
 MINGLE_API_ENDPOINT=ENV['MINGLE_API_ENDPOINT'] || 'https://example.mingle-api.thoughtworks.com'
 
 PROJECT_IDENTIFIER=ENV['PROJECT_IDENTIFIER'] || 'my_project'
+SKIP_SSL = false
 
 api_prefix = File.join(MINGLE_API_ENDPOINT, 'api', 'v2', 'projects', PROJECT_IDENTIFIER)
 
 uri = URI.parse(File.join(api_prefix, 'murmurs.xml'))
-HTTP_CLIENT = Net::HTTP.new(uri.host, uri.port)
+HTTP_CLIENT = Net::HTTP.new(uri.host, uri.port).tap do |client|
+  client.use_ssl = !SKIP_SSL
+end
 
 cmd_args = ARGV || []
 
