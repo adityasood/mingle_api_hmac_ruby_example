@@ -19,7 +19,7 @@ Replace `ACCESS_KEY_ID` with the value from credentials.csv downloaded from Ming
 
 Replace `SECRET_ACCESS_KEY` with the value from credentials.csv
 
-Replace `API_ENDPOINT` with the value from
+Replace `API_ENDPOINT` with https://<your-site-name>.mingle-api.thoughtworks.com
 
 Replace `PROJECT_IDENTIFIER` with the project identifier from the URL.
 
