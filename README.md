@@ -15,7 +15,7 @@ Instructions with rbenv
 
 Edit the client.rb with your favorite text editor.
 
-Replace `ACCESS_KEY_ID` with the value from credentials.csv downloaded from Mingle.
+Replace `MINGLE_LOGIN`
 
 Replace `SECRET_ACCESS_KEY` with the value from credentials.csv
 
