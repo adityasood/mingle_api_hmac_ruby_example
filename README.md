@@ -13,17 +13,14 @@ Instructions with rbenv
 
 `> bundle`
 
-Edit the client.rb with your favorite text editor.
 
-Replace `MINGLE_LOGIN`
+`export MINGLE_LOGIN=admin`
 
-Replace `SECRET_ACCESS_KEY` with the value from credentials.csv
+`export SECRET_ACCESS_KEY=your-hmac-key-from-credentials.csv`
 
-Replace `API_ENDPOINT` with https://your-site-name.mingle-api.thoughtworks.com
+`export API_ENDPOINT=https://your-site-name.mingle-api.thoughtworks.com`
 
-Replace `PROJECT_IDENTIFIER` with the project identifier from the URL.
-
-Or, alternatively, set ENV variables with the same names as above.
+`export PROJECT_IDENTIFIER=my_proj`
 
 `> ruby client.rb get` will request murmurs and print out their authors and content
 
