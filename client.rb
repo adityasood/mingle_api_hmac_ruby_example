@@ -15,12 +15,12 @@ require 'nokogiri'
 
 # config: use env vars or constants here
 
-ACCESS_KEY_ID=ENV['ACCESS_KEY_ID'] || 'your_login'
-SECRET_ACCESS_KEY=ENV['SECRET_ACCESS_KEY'] || 'xyz123'
+MINGLE_LOGIN = ENV['MINGLE_LOGIN']
+SECRET_ACCESS_KEY= ENV['SECRET_ACCESS_KEY']
 
-MINGLE_API_ENDPOINT=ENV['MINGLE_API_ENDPOINT'] || 'https://example.mingle-api.thoughtworks.com'
+MINGLE_API_ENDPOINT=ENV['API_ENDPOINT'] || ''
 
-PROJECT_IDENTIFIER=ENV['PROJECT_IDENTIFIER'] || 'my_project'
+PROJECT_IDENTIFIER=ENV['PROJECT_IDENTIFIER'] || 'attached'
 SKIP_SSL = false
 
 api_prefix = File.join(MINGLE_API_ENDPOINT, 'api', 'v2', 'projects', PROJECT_IDENTIFIER)
@@ -34,7 +34,8 @@ cmd_args = ARGV || []
 
 def do_hmac_request(request, expected_response_class = Net::HTTPOK)
 
-  signed_request = ApiAuth.sign!(request, ACCESS_KEY_ID, SECRET_ACCESS_KEY)
+  signed_request = ApiAuth.sign!(request, MINGLE_LOGIN, SECRET_ACCESS_KEY)
+
   response = HTTP_CLIENT.request(signed_request)
 
   if expected_response_class === response
